@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to Vajrakayay - Your gateway to premium clothing collections.">
+    <title>Login - VAJRAKAYAY</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+
+@font-face {
+    font-family: 'Myfonts';
+    src: url(Racing\ Power.otf);
+}
+
+
+        body {
+            background: linear-gradient(to right, #89253e, #3a6186);
+            font-family: 'Myfonts', sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-form h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .login-form input {
+            width: 90%;
+            padding: 10px 15px;
+            margin: 10px 0;
+            border: 5px solid  #3A6186;
+            border-radius: 8px;
+            background:  #89253E;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .login-form input:focus {
+            outline: none;
+            border-color: rgba(68, 3, 3, 0.45);
+        }
+
+        .login-form .btn {
+            background: #89253e;
+             font-family: 'Myfonts', sans-serif;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 15px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .login-form .btn:hover {
+            background: #3a6186;
+        }
+
+        .login-form a {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #76001c;
+            text-decoration: none;
+        }
+
+        .login-form a:hover {
+            text-decoration: underline;
+        }
+
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="login-container">
+        <form class="login-form">
+           <fieldset>
+            <legend>VAJRAKAYAY</legend>
+            <h1>Login</h1>
+            <input type="email" placeholder="Email" id="email" required>
+            <input type="password" placeholder="Password" id="password" required>
+            <button class="btn" type="submit">Login</button>
+            <a href="#">Forgot Password?</a>
+            <a href="signup.html">Don't have an account? Sign Up</a>
+           </fieldset>
+        </form>
+    </div>
+    <script src="particles.min.js"></script>
+    <script src="gsap.min.js"></script>
+    <script src="ScrollTrigger.min.js"></script>
+    <script>
+       
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5 },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 2 },
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" } },
+            },
+            retina_detect: true,
+        });
+
+        
+        gsap.from(".login-form", {
+            opacity: 0,
+            y: -50,
+            duration: 1,
+            ease: "power4.out",
+        });
+    </script>
+</body>
+</html>
